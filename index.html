@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Audicija — podela uloga</title>
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#6b1f3a">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="top" class="noprint">
+  <div class="brand">🎭 Audicija</div>
+  <input id="title" placeholder="Naziv predstave">
+  <div class="top-actions">
+    <a id="back" class="lnk" href="/#/admin" hidden>← Audicije</a>
+    <button id="btnRefresh" hidden>↻ Osveži prijave</button>
+    <span id="sync" class="sync"></span>
+    <button id="btnNew">Novo</button>
+    <button id="btnSample">Primer</button>
+    <button id="btnOpen">Otvori</button>
+    <button id="btnSave">Sačuvaj</button>
+  </div>
+</header>
+<nav id="tabs" class="noprint">
+  <button data-tab="roles">1 · Uloge</button>
+  <button data-tab="cats">2 · Kategorije</button>
+  <button data-tab="cands">3 · Kandidati</button>
+  <button data-tab="audit">4 · Audicija</button>
+  <button data-tab="result">5 · Podela</button>
+</nav>
+<main>
+  <section id="t-roles" class="tab"></section>
+  <section id="t-cats" class="tab"></section>
+  <section id="t-cands" class="tab"></section>
+  <section id="t-audit" class="tab"></section>
+  <section id="t-result" class="tab"></section>
+</main>
+<input type="file" id="fileIn" accept=".json" hidden>
+<script src="app.js"></script>
+</body>
+</html>
