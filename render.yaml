@@ -2,7 +2,7 @@ services:
   - type: web
     name: kasting-audicija
     runtime: node
-    plan: starter
+    plan: free
     buildCommand: echo "nema build koraka"
     startCommand: node server.js
     disk:
