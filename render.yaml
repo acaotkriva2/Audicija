@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: kasting-audicija
+    runtime: node
+    plan: starter
+    buildCommand: echo "nema build koraka"
+    startCommand: node server.js
+    disk:
+      name: podaci
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: DATA_DIR
+        value: /var/data
+      - key: TRUST_PROXY
+        value: "1"
+      - key: ADMIN_PHONE
+        sync: false
